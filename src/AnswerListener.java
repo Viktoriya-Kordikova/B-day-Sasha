@@ -9,6 +9,8 @@ public class AnswerListener implements ActionListener {
     private JButton[] answerButtons;
     private JButton nextButton;
 
+    public static int correctCount;
+
     public AnswerListener(int index, int correctAnswerIndex, JButton[] answerButtons, JButton nextButton) {
         this.answerIndex = index;
         this.correctAnswerIndex = correctAnswerIndex;
@@ -22,6 +24,7 @@ public class AnswerListener implements ActionListener {
         }
         if (answerIndex == correctAnswerIndex) {
             answerButtons[answerIndex].setBackground(new Color(134, 220, 93, 250));
+            correctCount++;
         } else {
             answerButtons[answerIndex].setBackground(new Color(252, 78, 78, 250));
             answerButtons[correctAnswerIndex].setBackground(new Color(134, 220, 93, 250));

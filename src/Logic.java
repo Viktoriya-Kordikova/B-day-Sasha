@@ -123,7 +123,7 @@ public class Logic {
         congratsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
-        JLabel congratsLabel = new JLabel("<html><center><br><br><br>Ура! Саша, ты справился с викториной!<br>Вот твой праздничный торт, скорее загадывай желание, оно обязательно сбудется!<br></center></html>", JLabel.CENTER);
+        JLabel congratsLabel = new JLabel("<html><center><br><br><br>Ура! Саша, ты справился с викториной!<br>Правильных ответов: " + AnswerListener.correctCount + " из " + DoNotOpen.getQuestions().length + " <br>Вот твой праздничный торт, скорее загадывай желание, оно обязательно сбудется!<br></center></html>", JLabel.CENTER);
         congratsLabel.setFont(new Font("Arial", Font.BOLD, 18));
         ImageIcon gifIcon = new ImageIcon("resources/birthdayCake.gif");
         JLabel gifLabel = new JLabel(gifIcon);
